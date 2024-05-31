@@ -6,7 +6,7 @@ from tqdm.auto import tqdm
 from numpy import Inf
 from pathlib import Path
 from torch.optim import Adam, SGD, Adagrad
-from src import criterion import Log1DNetv3
+from src import criterion, Log1DNetv3
 
 def main(model:Log1DNetv3, trainloader:DataLoader, testloader:DataLoader, epochs):
     
