@@ -1,5 +1,5 @@
 import torch
-from model import Log1DNetv3
+from src.core.model import Log1DNetv3
 from ignite.contrib.metrics.regression.r2_score import R2Score
 from torch.nn import MSELoss
 from torch.utils.data import DataLoader 
