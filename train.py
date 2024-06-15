@@ -13,7 +13,7 @@ def main(model:Log1DNetv3, trainloader:DataLoader, testloader:DataLoader, epochs
     train_dtc_loss, train_dtc_score, train_dts_loss, train_dts_score = list(), list(), list(), list()
     val_dtc_loss, val_dtc_score, val_dts_loss, val_dts_score = list(), list(), list(), list()
 
-    optimizer = Adam(model.parameters(), lr=1e-4)
+    optimizer = Adam(model.parameters(), lr=1e-3, weight_decay=1e-3)
 
     best_val_loss = Inf
 
@@ -39,5 +39,6 @@ def main(model:Log1DNetv3, trainloader:DataLoader, testloader:DataLoader, epochs
 
 
     return train_dtc_loss, train_dtc_score, train_dts_loss, train_dts_score, val_dtc_loss, val_dtc_score, val_dts_loss, val_dts_score
+
 
 

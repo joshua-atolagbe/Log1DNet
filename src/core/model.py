@@ -2,7 +2,7 @@ from torch import nn
 
 class Log1DNetv3(nn.Module):
 
-    def __init__(self, n_features:int=4, batch_size:int=64, n_outputs:int=2):
+    def __init__(self, n_features:int=4, batch_size:int=256, n_outputs:int=2):
         super(Log1DNetv3, self).__init__()
         self.features = n_features
         self.bs = batch_size
@@ -11,32 +11,32 @@ class Log1DNetv3(nn.Module):
         self.conv1 = nn.Sequential(
             nn.Conv1d(n_features, batch_size, kernel_size=1),
             nn.BatchNorm1d(batch_size),
-            nn.ReLU(),
+            nn.LeakyReLU(),
             # nn.Dropout(0.5),
             nn.AvgPool1d(1),
         )
         self.conv2 = nn.Sequential(
             nn.Conv1d(batch_size, batch_size*2, kernel_size=1),
             nn.BatchNorm1d(batch_size*2),
-            nn.ReLU(),
-            nn.Dropout(0.5),
+            nn.LeakyReLU(),
+            # nn.Dropout(0.5),
             nn.AvgPool1d(1),
         )
         self.conv3 = nn.Sequential(
             nn.Conv1d(batch_size*2, batch_size*4, kernel_size=1),
             nn.BatchNorm1d(batch_size*4),
-            nn.Dropout(0.5),
-            nn.ReLU(),
+            # nn.Dropout(0.5),
+            nn.LeakyReLU(),
         )
         self.conv4 = nn.Sequential(
             nn.Conv1d(batch_size*4, batch_size, kernel_size=1),
             nn.BatchNorm1d(batch_size),
-            nn.ReLU(),
+            nn.LeakyReLU(),
         )
         self.flat = nn.Flatten()
         self.layer = nn.Sequential(
             nn.Linear(batch_size, batch_size),
-            nn.ReLU(),
+            nn.LeakyReLU(),
         )
         self.output = nn.Sequential(
             nn.Linear(batch_size, 2)
