@@ -2,18 +2,19 @@
 
 Instructions on how to run code for reproducible results
 
-#### Clone
+#### Step 0: Clone repo and install requirements
 
 ```python 
-https://github.com/joshua-atolagbe/Log1DNet
+git clone https://github.com/joshua-atolagbe/Log1DNet
+cd Log1DNet && pip install -r requirements.txt
 ```
 
-#### Data
+#### Step 1: Data
 
-Download well data from 
+Download the well data [here](https://drive.google.com/drive/folders/1xK_xrf7EqFlsz_4YhG1tcyKB7ceUKV-l?usp=sharing) 
 
-then,create a new directory named `data` and move the well files into it.
+Create a folder named `data` and move the well files into it.
 
-#### Run notebook
+#### Step 2: Run notebook
 
-Run the jupyter notebook notebook
+Open and run all cells in the [jupyter](https://github.com/joshua-atolagbe/Log1DNet/blob/master/Log1DNet.ipynb) notebook
