@@ -172,7 +172,7 @@ def make_log_plot(logs, x1, x2, x3, x4, x5, x6, x7, x8, well_name):
     ax[1].minorticks_on()
     ax[1].grid(which='major', linestyle='-', linewidth=1.0, color='darkgrey')
     ax[1].grid(which='minor', linestyle='-', linewidth=0.5, color='lightgrey')
-    ax[1].plot(logs[x2], logs['DEPTH'], '--r')
+    ax[1].plot(logs[x2], logs['DEPTH'], '--r', linewidth=1)
     ax[1].set_xlim(0.2, 2000)
     ax[1].set_xlabel('RT(ohm-m)', fontsize=12)
     ax[1].xaxis.label.set_color('red')
