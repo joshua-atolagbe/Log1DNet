@@ -156,7 +156,7 @@ def make_log_plot(logs, x1, x2, x3, x4, x5, x6, x7, x8, well_name):
     ax[0].minorticks_on()
     ax[0].grid(which='major', linestyle='-', linewidth=1, color='darkgrey')
     ax[0].yaxis.grid(which='minor', linestyle='-', linewidth=0.5, color='lightgrey')
-    ax[0].plot(logs[x1], logs['DEPTH'], 'black')
+    ax[0].plot(logs[x1], logs['DEPTH'], 'black', linewidth=1)
     ax[0].set_xlim(0, 200)#logs[x1].min(), logs[x1].max())
     ax[0].set_xlabel('GR(gAPI)', fontsize=12)
     ax[0].xaxis.label.set_color('black')
