@@ -9,7 +9,7 @@ from torch.utils.data import (
                               )
 from torch.utils.data.sampler import SubsetRandomSampler
 
-device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 def dloader(x, y, bs=64):
 
