@@ -1,20 +1,20 @@
 ## Log1DNet: A Deep Learning Architecture for Sonic Log Prediction for Seal Rock Identification in Carbon Capture and Storage Projects
 
-Instructions on how to run code for reproducible results
+## Architecture
+<img src='figures/arch.png'>
+<div style="text-align: center;">
+    <img src='figures/legend.png' width=256>
+</div>
 
-#### Step 0: Clone repo and install requirements
+## Dataset
+- All data used for training and testing the model can be downloaded [here](https://drive.google.com/drive/folders/1xK_xrf7EqFlsz_4YhG1tcyKB7ceUKV-l?usp=sharing) 
+- Create a folder named `data` in the current directory. Move the downloaded well files here.
+## Install requirements
 
-```python 
-git clone https://github.com/joshua-atolagbe/Log1DNet
-cd Log1DNet && pip install -r requirements.txt
+```shell 
+pip install -r requirements.txt
 ```
 
-#### Step 1: Data
+## Run notebook
 
-Download the well data [here](https://drive.google.com/drive/folders/1xK_xrf7EqFlsz_4YhG1tcyKB7ceUKV-l?usp=sharing) 
-
-Create a folder named `data` and move the well files into it.
-
-#### Step 2: Run notebook
-
-Open and run all cells in the [jupyter](https://github.com/joshua-atolagbe/Log1DNet/blob/master/Log1DNet.ipynb) notebook
+Open and run all cells in the [Log1DNet](https://github.com/joshua-atolagbe/Log1DNet/blob/master/Log1DNet.ipynb) notebook to get the same results reported in the paper 
